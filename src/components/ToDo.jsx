@@ -10,13 +10,15 @@ function ToDo(props) {
   return (
     <div style={{ textDecoration: clicked ? "line-through" : "" }}>
       <li>{props.item}</li>
-      <button onClick={handel}>done</button>
+      <button onClick={handel}>
+        <span>&#10004;</span>
+      </button>
       <button
         onClick={() => {
           props.onChecked(props.id);
         }}
       >
-        Delete
+        <span>&#10008;</span>
       </button>
     </div>
   );
